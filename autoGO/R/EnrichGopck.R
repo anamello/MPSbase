@@ -150,6 +150,7 @@ automatic_GO_enrich <-
       print(paste("File loaded:", filename))
       #Input datafile
       DEGTable <- read.delim(filename, stringsAsFactors = FALSE, sep=tableseps)
+      DEGTable<- as.data.frame(DEGTable)
 
       #Check if the table must be reordered
       if(!orderby==""){
